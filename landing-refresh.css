@@ -7,13 +7,13 @@ body{min-height:100vh}
 .brand span{display:block}.brand:hover{color:var(--deep-green);transform:rotate(0deg) scale(1.02)}
 .top-actions{gap:12px}
 
-.hero{background:none!important;min-height:600px;padding-top:105px;overflow:hidden}
+.hero{background:none!important;min-height:600px;padding:45px 4vw;overflow:hidden;display:flex;align-items:center}
 .hero h1{position:relative;z-index:2;max-width:68%;font-weight:900!important;font-size:clamp(66px,9vw,145px)!important;line-height:.8!important;color:var(--ink);-webkit-text-stroke:1.4px var(--ink);text-shadow:3px 4px 0 rgba(36,74,53,.22)}
 .hero h1 em{-webkit-text-stroke:4px var(--ink)!important;text-shadow:8px 8px 0 #7ea37d!important;color:var(--pastel-green)!important}
 
-.hero-shop{position:absolute;right:7vw;top:105px;width:min(285px,24vw);aspect-ratio:1/1.08;border:3px solid var(--ink);border-radius:34px;background:#fff7a8;box-shadow:10px 10px 0 var(--deep-green);padding:25px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;text-align:left;cursor:pointer;transform:rotate(2deg);transition:.22s;z-index:3;overflow:hidden}
+.hero-shop{position:absolute;right:7vw;top:50%;width:min(285px,24vw);aspect-ratio:1/1.08;border:3px solid var(--ink);border-radius:34px;background:#fff7a8;box-shadow:10px 10px 0 var(--deep-green);padding:25px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;text-align:left;cursor:pointer;transform:translateY(-50%) rotate(2deg);transition:.22s;z-index:3;overflow:hidden}
 .hero-shop:before{content:"";position:absolute;width:185px;height:185px;border-radius:50%;background:#bcd9ff;right:-55px;top:-55px;border:2px solid var(--ink)}
-.hero-shop:hover{transform:rotate(0) translateY(-7px);box-shadow:14px 14px 0 var(--ink)}
+.hero-shop:hover{transform:translateY(calc(-50% - 7px)) rotate(0);box-shadow:14px 14px 0 var(--ink)}
 .hero-shop-icon{position:absolute;right:33px;top:27px;font-size:54px;z-index:1;transform:rotate(12deg)}
 .hero-shop small{font-size:9px;letter-spacing:.1em}.hero-shop strong{font-size:54px;line-height:.9;margin:8px 0}.hero-shop i{font-style:normal;font-size:9px}
 
@@ -23,8 +23,8 @@ body{min-height:100vh}
 .art{overflow:hidden}
 
 /* Softer shapes, stronger outlines, and centered display titles. */
-.hero h1{margin-left:2vw;text-align:center}
-.section-heading{justify-content:center;text-align:center}.section-heading>div{width:100%}.section-heading>p{position:absolute;right:4vw}
+.hero h1{margin:0;text-align:left}
+.section-heading{justify-content:flex-start;text-align:left}.section-heading>div{width:auto}.section-heading>p{position:absolute;right:4vw}
 .game-header,.shop-hero{position:relative;justify-content:center;text-align:center}
 .game-header>div:first-child,.shop-hero>div:first-child{width:100%}
 .scorebox,.shop-wallet{position:absolute;right:0;bottom:0}
@@ -42,5 +42,5 @@ body{min-height:100vh}
 .number-grid,.pattern-sequence{border-width:3px}
 .instructions b,.play-circle{border-radius:50%}
 
-@media(max-width:900px){.hero{padding-top:65px;min-height:auto;padding-bottom:70px}.hero h1{max-width:100%;margin-left:0;font-size:14vw!important}.hero-shop{position:relative;right:auto;top:auto;width:100%;max-width:420px;aspect-ratio:auto;min-height:180px;margin:55px auto 0;transform:none}.hero-shop strong{font-size:46px}.game-card{border-radius:24px}.section-heading>p{display:none}.scorebox,.shop-wallet{position:static;margin-left:15px}.game-header,.shop-hero{text-align:left}}
+@media(max-width:900px){.hero{display:block;padding-top:65px;min-height:auto;padding-bottom:70px}.hero h1{max-width:100%;margin-left:0;font-size:14vw!important}.hero-shop{position:relative;right:auto;top:auto;width:100%;max-width:420px;aspect-ratio:auto;min-height:180px;margin:55px auto 0;transform:none}.hero-shop:hover{transform:translateY(-7px)}.hero-shop strong{font-size:46px}.game-card{border-radius:24px}.section-heading>p{display:none}.scorebox,.shop-wallet{position:static;margin-left:15px}.game-header,.shop-hero{text-align:left}}
 @media(max-width:600px){.brand{font-size:19px!important}.wallet-btn{font-size:8px}.hero h1 em{-webkit-text-stroke:2.5px var(--ink)!important;text-shadow:5px 5px 0 #7ea37d!important}.hero-shop{border-radius:25px}.game-card{border-radius:22px}}
