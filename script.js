@@ -39,7 +39,7 @@ const products=[
 
 document.querySelectorAll('[data-game]').forEach(btn=>btn.addEventListener('click',()=>openGame(btn.dataset.game)));
 document.querySelectorAll('[data-home]').forEach(btn=>btn.addEventListener('click',goHome));
-document.querySelector('#shopBtn').addEventListener('click',openShop);document.querySelector('#walletBtn').addEventListener('click',openShop);
+document.querySelector('#shopBtn').addEventListener('click',openShop);
 function showView(view){[home,gameView,shopView].forEach(v=>v.classList.remove('active'));view.classList.add('active');window.scrollTo(0,0)}
 function openGame(id){document.querySelector('.victory-overlay')?.remove();currentGame=id;score=0;sessionPoints=0;gameWon=false;updateScore();showView(gameView);titleEl.textContent=games[id].title;kickerEl.textContent=games[id].kicker;games[id].start()}
 function goHome(){currentGame=null;gameArea.innerHTML='';showView(home)}

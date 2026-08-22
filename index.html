@@ -10,16 +10,15 @@
   <link rel="stylesheet" href="shop.css">
   <link rel="stylesheet" href="victory.css">
   <link rel="stylesheet" href="gameplay-upgrades.css">
+  <link rel="stylesheet" href="landing-refresh.css">
 </head>
 <body>
   <header class="topbar">
     <button class="brand" data-home aria-label="Go to arcade home">
-      <span class="brand-mark">D</span>
-      <span>NUMBER<br><b>ARCADE</b></span>
+      <span>Daniel's Arcade</span>
     </button>
     <div class="top-actions">
-      <button class="wallet-btn" id="walletBtn" aria-label="Open rewards shop"><span>★</span> <b id="pointBalance">0</b> POINTS</button>
-      <button class="shop-btn" id="shopBtn">SHOP</button>
+      <div class="wallet-btn" id="walletBtn" role="status" aria-label="Point balance"><span>★</span> <b id="pointBalance">0</b> POINTS</div>
       <button class="exit-btn" data-home>Quick Exit <span>×</span></button>
     </div>
   </header>
@@ -27,8 +26,13 @@
   <main>
     <section id="home" class="home-view view active">
       <div class="hero">
-        <p class="eyebrow">WELCOME TO DANIEL'S ARCADE</p>
         <h1>THINK FAST.<br><em>PLAY SMART.</em></h1>
+        <button class="hero-shop" id="shopBtn" aria-label="Open rewards shop">
+          <span class="hero-shop-icon">★</span>
+          <small>SPEND YOUR POINTS</small>
+          <strong>SHOP</strong>
+          <i>POWER-UPS &amp; ACCESSORIES →</i>
+        </button>
         <div class="scroll-cue"><span>↓</span> PICK A GAME</div>
       </div>
 
