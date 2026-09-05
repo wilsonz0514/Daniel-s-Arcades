@@ -3,22 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daniel's Number Arcade</title>
+  <title>Pixel Party</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="previews.css">
+  <link rel="stylesheet" href="previews.css?v=purple-preview-1">
   <link rel="stylesheet" href="font-theme.css">
-  <link rel="stylesheet" href="shop.css">
   <link rel="stylesheet" href="victory.css">
   <link rel="stylesheet" href="gameplay-upgrades.css">
-  <link rel="stylesheet" href="landing-refresh.css">
+  <link rel="stylesheet" href="landing-refresh.css?v=strikes-panel-1">
 </head>
 <body>
   <header class="topbar">
     <button class="brand" data-home aria-label="Go to arcade home">
-      <span>Daniel's Arcade</span>
+      <span>Pixel Party</span>
     </button>
     <div class="top-actions">
-      <div class="wallet-btn" id="walletBtn" role="status" aria-label="Point balance"><span>★</span> <b id="pointBalance">0</b> POINTS</div>
       <button class="exit-btn" data-home>Quick Exit <span>×</span></button>
     </div>
   </header>
@@ -27,12 +25,6 @@
     <section id="home" class="home-view view active">
       <div class="hero">
         <h1>THINK FAST.<br><em>PLAY SMART.</em></h1>
-        <button class="hero-shop" id="shopBtn" aria-label="Open rewards shop">
-          <span class="hero-shop-icon">★</span>
-          <small>SPEND YOUR POINTS</small>
-          <strong>SHOP</strong>
-          <i>POWER-UPS &amp; ACCESSORIES →</i>
-        </button>
         <div class="scroll-cue"><span>↓</span> PICK A GAME</div>
       </div>
 
@@ -44,16 +36,16 @@
           <button class="game-card merge-card" data-game="merge">
             <div class="card-top"><span class="number">01</span><span class="play-circle">↗</span></div>
             <div class="art merge-art" aria-hidden="true">
-              <div class="preview-score">GOAL <b>72+</b></div>
+              <div class="preview-score">GOAL <b>WEAVE 5 WORDS</b></div>
               <div class="mini-board">
-                <span class="m3">3</span><span class="m5">5</span><span class="m7">7</span><span></span>
-                <span></span><span class="m9 pulse-tile">9</span><span class="m9 pulse-tile delay">9</span><span></span>
-                <span class="m6">6</span><span></span><span class="m18">18</span><span class="m14">14</span>
-                <span></span><span class="m5">5</span><span class="m36">36</span><span></span>
+                <span class="m3">M</span><span class="m5">I</span><span class="m7">S</span><span class="m9">U</span>
+                <span class="m6">N</span><span class="m9 pulse-tile">D</span><span class="m9 pulse-tile delay">E</span><span class="m14">R</span>
+                <span class="m6">S</span><span class="m5">T</span><span class="m18">A</span><span class="m14">N</span>
+                <span class="m7">D</span><span class="m5">I</span><span class="m36">N</span><span class="m3">G</span>
               </div>
-              <div class="merge-flash">9 + 9 = <b>?</b></div>
+              <div class="merge-flash">MIS + UNDER + STANDING = <b>?</b></div>
             </div>
-            <div class="card-copy"><h3>MERGE<br>MAESTRO</h3><p>Combine tiles. Type the sum. One wrong move costs you.</p><span class="tag">QUICK MATH</span></div>
+            <div class="card-copy"><h3>WORD<br>WEAVER</h3><p>Weave letters into five hinted words: 5, 7, 10, 12, and 15 letters.</p><span class="tag">WORD BUILDING</span></div>
           </button>
           <button class="game-card multiples-card" data-game="multiples">
             <div class="card-top"><span class="number">02</span><span class="play-circle">↗</span></div>
@@ -68,8 +60,8 @@
           <button class="game-card pattern-card" data-game="pattern">
             <div class="card-top"><span class="number">03</span><span class="play-circle">↗</span></div>
             <div class="art pattern-art" aria-hidden="true">
-              <div class="level-chip">LEVEL 21 / 25</div>
-              <div class="pattern-track advanced"><span class="shape circle coral small"></span><span class="shape triangle lime tilt"></span><span class="shape square violet"></span><span class="shape circle blue tilt small"></span><span class="shape triangle coral"></span><span class="shape mystery">?</span></div>
+              <div class="level-chip">SHAPES · COLOR · ROTATION</div>
+              <div class="pattern-track advanced"><span class="shape triangle lime"></span><span class="shape square violet"></span><span class="shape circle blue tilt"></span><span class="shape mystery">?</span></div>
               <div class="progress-dots"><i></i><i></i><i></i><i></i><i></i><i></i></div>
             </div>
             <div class="card-copy"><h3>PATTERN<br>PULSE</h3><p>Read the sequence. Find what comes next. Keep climbing.</p><span class="tag">LOGIC</span></div>
@@ -80,26 +72,15 @@
 
     <section id="gameView" class="game-view view" aria-live="polite">
       <div class="game-header">
-        <div><p class="eyebrow" id="gameKicker">GAME 01 / QUICK MATH</p><h2 id="gameTitle">MERGE MAESTRO</h2></div>
+        <div><p class="eyebrow" id="gameKicker">GAME 01 / WORD BUILDING</p><h2 id="gameTitle">WORD WEAVER</h2></div>
+        <div id="mistakes" class="mistakes" aria-label="Mistakes remaining"><span class="mistake-x">×</span><span class="mistake-x">×</span><span class="mistake-x">×</span></div>
         <div class="scorebox"><small>SCORE</small><strong id="score">0</strong></div>
       </div>
       <div id="gameArea"></div>
     </section>
 
-    <section id="shopView" class="shop-view view" aria-labelledby="shopTitle">
-      <div class="shop-hero">
-        <div><p class="eyebrow">SPEND WHAT YOU EARN</p><h2 id="shopTitle">POWER-UP SHOP</h2></div>
-        <div class="shop-wallet"><small>YOUR BALANCE</small><strong><span>★</span> <b id="shopBalance">0</b></strong></div>
-      </div>
-      <div class="inventory-strip">
-        <span>YOUR INVENTORY</span>
-        <b>SKIPS <i id="skipCount">0</i></b>
-        <b>GAMEPASS USES <i id="accessoryCount">0</i></b>
-      </div>
-      <div class="shop-grid" id="shopGrid"></div>
-    </section>
   </main>
   <div id="toast" class="toast" role="status"></div>
-  <script src="script.js"></script>
+  <script src="script.js?v=strikes-panel-1"></script>
 </body>
 </html>
