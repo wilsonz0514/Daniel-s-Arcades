@@ -53,4 +53,5 @@ button{border-radius:0!important}
 .dictionary-note{text-align:center;margin:16px 0 0;font-size:9px;letter-spacing:.08em;color:#65566c}
 
 @media(max-width:900px){body{background-attachment:scroll;background-size:auto 100vh}.hero{display:block;padding-top:65px;min-height:auto;padding-bottom:70px}.hero h1{max-width:100%;margin-left:0;font-size:14vw!important}.game-card{border-radius:24px}.section-heading>p{display:none}.scorebox{position:static;margin-left:15px}.game-header{text-align:left}}
+.mistake-x,.mistake-x.lit{box-shadow:none!important}.mistake-x.lit{background:#fff!important;color:#d92f3f!important}
 @media(max-width:600px){.brand{font-size:19px!important}.hero h1 em{-webkit-text-stroke:2.5px var(--ink)!important;text-shadow:5px 5px 0 #7ea37d!important}.word-board{grid-template-columns:repeat(4,minmax(0,1fr))}.word-answer{align-items:flex-start;flex-direction:column}.word-answer strong{min-width:100%;max-width:100%}}
