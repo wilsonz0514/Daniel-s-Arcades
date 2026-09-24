@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="font-theme.css">
   <link rel="stylesheet" href="victory.css">
   <link rel="stylesheet" href="gameplay-upgrades.css">
-  <link rel="stylesheet" href="landing-refresh.css?v=strikes-stable-2">
+  <link rel="stylesheet" href="landing-refresh.css?v=word-weaver-final-1">
 </head>
 <body>
   <header class="topbar">
@@ -17,6 +17,7 @@
       <span>Pixel Party</span>
     </button>
     <div class="top-actions">
+      <button class="exit-btn" id="shopButton">SHOP · <span id="coinCount">0</span> COINS</button>
       <button class="exit-btn" data-home>Quick Exit <span>×</span></button>
     </div>
   </header>
@@ -45,7 +46,7 @@
               </div>
               <div class="merge-flash">MIS + UNDER + STANDING = <b>?</b></div>
             </div>
-            <div class="card-copy"><h3>WORD<br>WEAVER</h3><p>Weave letters into five hinted words: 5, 7, 10, 12, and 15 letters.</p><span class="tag">WORD BUILDING</span></div>
+            <div class="card-copy"><h3>WORD<br>WEAVER</h3><p>Weave letters into five hinted words: 5, 7, 9, 11, and 13 letters.</p><span class="tag">WORD BUILDING</span></div>
           </button>
           <button class="game-card multiples-card" data-game="multiples">
             <div class="card-top"><span class="number">02</span><span class="play-circle">↗</span></div>
@@ -79,8 +80,17 @@
       <div id="gameArea"></div>
     </section>
 
+    <section id="shopView" class="shop-view view">
+      <div class="shop-heading"><p class="eyebrow">POWER-UPS</p><h2>THE SHOP</h2><p>Coins earned by playing are saved locally on this device.</p></div>
+      <div class="shop-grid">
+        <article class="shop-item"><h3>LETTER SHUFFLE</h3><p>Shuffle Word Weaver’s letter tiles while keeping the same target word.</p><button class="primary shop-buy" data-item="shuffle">BUY FOR 500 COINS</button></article>
+        <article class="shop-item"><h3>WRONG ANSWER SWEEP</h3><p>Remove three incorrect choices from one Multiple Hunter round.</p><button class="primary shop-buy" data-item="remove">BUY FOR 650 COINS</button></article>
+        <article class="shop-item"><h3>PATTERN CLUE</h3><p>Show part of the hidden pattern as a text clue for one Pattern Pulse level.</p><button class="primary shop-buy" data-item="clue">BUY FOR 800 COINS</button></article>
+      </div>
+    </section>
+
   </main>
   <div id="toast" class="toast" role="status"></div>
-  <script src="script.js?v=strikes-wordweaver-3"></script>
+  <script src="script.js?v=word-weaver-final-1"></script>
 </body>
 </html>
