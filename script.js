@@ -6,7 +6,7 @@ if(!localStorage.getItem('pixelPartyTestPassGrant')){inventory.shuffle=1;invento
 if(!localStorage.getItem('pixelPartyPatternTestKit')){inventory.clue=1;localStorage.setItem('pixelPartyInventory',JSON.stringify(inventory));localStorage.setItem('pixelPartyPatternTestKit','1')}
 function saveShop(){localStorage.setItem('pixelPartyCoins',coins);localStorage.setItem('pixelPartyInventory',JSON.stringify(inventory));const el=document.querySelector('#coinCount');if(el)el.textContent=coins}
 function openShop(){showView(shopView);saveShop();document.title='Shop | Pixel Party'}
-function buyItem(item,cost){if((inventory[item]||0)>0){toast('YOU ALREADY OWN THIS ONE-USE ITEM');return}if(coins<cost){toast(`YOU NEED ${cost-coins} MORE COINS`);return}coins-=cost;inventory[item]=1;saveShop();toast('ITEM PURCHASED — USE IT IN ITS GAME')}
+function buyItem(item,cost){if((inventory[item]||0)>0){toast('YOU ALREADY OWN THIS ONE-USE ITEM');return}if(coins<cost){toast(`YOU NEED ${cost-coins} MORE COINS`);return}coins-=cost;inventory[item]=1;if(item==='clue'){localStorage.setItem('patternPowerupReady','1');localStorage.setItem('pixelPartyPatternTestKit','1')}saveShop();toast('ITEM PURCHASED — USE IT IN ITS GAME')}
 document.querySelector('#shopButton')?.addEventListener('click',openShop);document.querySelectorAll('.shop-buy').forEach(btn=>btn.onclick=()=>buyItem(btn.dataset.item,{shuffle:500,remove:650,clue:800}[btn.dataset.item]));saveShop();
 
 const games={
